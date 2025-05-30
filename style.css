@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -110,10 +109,13 @@ h1 {
 }
 
 .game-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 1rem;
   text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .teams-container {
@@ -132,9 +134,11 @@ h1 {
 }
 
 .vs-text {
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: #e50914;
+  letter-spacing: 1px;
 }
 
 .games:hover {
@@ -158,37 +162,37 @@ h1 {
   .header {
     padding: 1rem 2rem;
   }
-  
+
   h1 {
     font-size: 1.5rem;
   }
-  
+
   .hero-section {
     height: 50vh;
     margin-top: 70px;
   }
-  
+
   .hero-content h2 {
     font-size: 2rem;
   }
-  
+
   .content-section {
     padding: 2rem;
   }
-  
+
   .games-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .games {
     height: 150px;
   }
-  
+
   .game-card-content {
     padding: 1rem;
   }
-  
+
   .team-logo {
     width: 40px;
     height: 40px;

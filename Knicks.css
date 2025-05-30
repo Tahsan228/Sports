@@ -5,10 +5,14 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
 html {
   height: 100%;
   width: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -30,11 +34,13 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #e50914;
   cursor: pointer;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .video-section {
@@ -46,11 +52,14 @@ h1 {
 }
 
 h3 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 2rem;
   text-align: center;
   color: #ffffff;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 .video-container {
@@ -80,6 +89,7 @@ iframe {
   border: 2px solid #555;
   border-radius: 6px;
   color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.8rem 2rem;
@@ -87,7 +97,7 @@ iframe {
   transition: all 0.3s ease;
   min-width: 120px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   position: relative;
 }
 

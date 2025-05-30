@@ -8,44 +8,115 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  color: #ffeb3b;
+  background: #141414;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1rem 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e50914;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+              url('https://dynl.mktgcdn.com/p/KDQxglPrJizP12I31dG0tbuTrwQPoP8_LhKsiAOXYic/1080x1080.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero-content h2 {
   font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.content-section {
+  padding: 4rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-bottom: 3rem;
-  text-align: center;
-  letter-spacing: -0.02em;
-  text-shadow: 0 4px 20px rgba(255, 235, 59, 0.3);
 }
 
 .games {
-  background: rgba(255, 235, 59, 0.1);
-  border: 2px solid rgba(255, 235, 59, 0.3);
-  border-radius: 16px;
-  color: #ffeb3b;
-  font-size: 1.2rem;
+  background: #222;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding: 1.5rem 3rem;
-  margin: 1rem;
+  padding: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  min-width: 250px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-card-content {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #333, #444);
+}
+
+.game-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.teams-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,51 +124,73 @@ h1 {
 }
 
 .team-logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #555;
+}
+
+.vs-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e50914;
 }
 
 .games:hover {
-  background: rgba(255, 235, 59, 0.2);
-  border-color: rgba(255, 235, 59, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 235, 59, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.games:hover .game-card-content {
+  background: linear-gradient(45deg, #444, #555);
 }
 
 .games:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 .subway-image {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin: 2rem 0;
-  box-shadow: 0 8px 25px rgba(255, 235, 59, 0.2);
-  border: 2px solid rgba(255, 235, 59, 0.3);
+  display: none;
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    height: 50vh;
+    margin-top: 70px;
+  }
+  
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 2rem;
+  }
+  
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   
   .games {
-    font-size: 1rem;
-    padding: 1.2rem 2rem;
-    min-width: 200px;
+    height: 150px;
   }
   
-  body {
+  .game-card-content {
     padding: 1rem;
   }
   
-  .subway-image {
-    width: 250px;
-    height: 150px;
+  .team-logo {
+    width: 40px;
+    height: 40px;
   }
 }

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners to Player buttons (for Knicks.html page)
     const playerButtons = document.querySelectorAll('.Player');
     const iframe = document.querySelector('iframe');
-    
+
     if (playerButtons.length > 0 && iframe) {
         playerButtons.forEach((button, index) => {
             button.addEventListener('click', function() {
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     iframe.src = 'https://cheapmarket.blog/idea-1/?id=401772993';
                     iframe.width = '750';
                     iframe.height = '400';
-                } else if (index === 1) { // Player 2 - new iframe
-                    iframe.src = 'https://cheapmarket.blog/idea-1/?id=401772993';
-                    iframe.width = '1020';
-                    iframe.height = '600';
+                } else if (index === 1) { // Player 2 - different iframe source
+                    iframe.src = 'https://goalstreamz.com/events/nbastreams1/';
+                    iframe.width = '750';
+                    iframe.height = '400';
                 }
             });
         });
